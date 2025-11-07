@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Interativo de Saúde Mental</title>
+
+    <style>
+
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; }
+
+        .question { margin-bottom: 20px; }
+
+        .options { margin-left: 20px; }
+
+        button { padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer; margin-top: 20px; }
+
+        button:hover { background-color: #45a049; }
+
+        #result { margin-top: 20px; padding: 10px; border: 1px solid #ccc; background-color: #fff; display: none; }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Quiz Interativo de Saúde Mental</h1>
+
+    <p>Responda às perguntas abaixo selecionando uma alternativa (A, B, C ou D). No final, clique em "Finalizar Quiz" para ver seu resultado automaticamente.</p>
+
+
+    <div id="quiz">
+
+        <div class="question">
+
+            <p>1. Como você costuma se sentir ao acordar pela manhã?</p>
+
+            <div class="options">
+
+                <input type="radio" name="q1" value="1"> A) Disposto(a) e animado(a)<br>
+
+                <input type="radio" name="q1" value="2"> B) Cansado(a), mas sigo o dia<br>
+
+                <input type="radio" name="q1" value="3"> C) Com vontade de ficar na cama o dia todo<br>
+
+                <input type="radio" name="q1" value="4"> D) Ansioso(a) só de pensar no dia que vem
+
+            </div>
+
+        </div>
+
+
+        <div class="question">
+
+            <p>2. Você consegue dormir bem à noite?</p>
+
+            <div class="options">
+
+                <input type="radio" name="q2" value="1"> A) Sim, durmo bem e acordo descansado(a)<br>
+
+                <input type="radio" name="q2" value="2"> B) Demoro um pouco para dormir<br>
+
+                <input type="radio" name="q2" value="3"> C) Acordo várias vezes ou tenho pesadelos<br>
+
+                <input type="radio" name="q2" value="4"> D) Quase não consigo dormir direito
+
+            </div>
+
+        </div>
+
+
+        <div class="question">
+
+            <p>3. Com que frequência você se sente ansioso(a) ou preocupado(a) sem motivo claro?</p>
+
+            <div class="options">
+
+                <input type="radio" name="q3" value="1"> A) Raramente<br>
+
+                <input type="radio" name="q3" value="2"> B) Às vezes<br>
+
+                <input type="radio" name="q3" value="3"> C) Quase todos os dias<br>
+
+                <input type="radio" name="q3" value="4"> D) Todos os dias, várias vezes
+
+            </div>
+
+        </div>
+
+
+        <div class="question">
+
+            <p>4. Você sente que tem com quem conversar quando está mal?</p>
+
+            <div class="options">
+
+                <input type="radio" name="q4" value="1"> A) Sim, tenho pessoas em quem confio<br>
+
+                <input type="radio" name="q4" value="2"> B) Mais ou menos, às vezes me sinto sozinho(a)<br>
+
+                <input type="radio" name="q4" value="3"> C) Não costumo me abrir com ninguém<br>
+
+                <input type="radio" name="q4" value="4"> D) Sinto que ninguém me entende
+
+            </div>
+
+        </div>
+
+
+        <div class="question">
+
+            <p>5. Como está sua motivação para fazer coisas do dia a dia (escola, trabalho, lazer)?</p>
+
+            <div class="options">
+
+                <input type="radio" name="q5" value="1"> A) Estou motivado(a) e ativo(a)<br>
+
+                <input type="radio" name="q5" value="2"> B) Faço por obrigação, mas sem empolgação<br>
+
+                <input type="radio" name="q5" value="3"> C) Tenho dificuldade em começar qualquer coisa<br>
+
+                <input type="radio" name="q5" value="4"> D) Sinto que tudo é pesado demais
+
+            </div>
+
+        </div>
+
+
+        <div class="question">
+
+            <p>6. Quando algo dá errado, como você reage?</p>
+
+            <div class="options">
+
+                <input type="radio" name="q6" value="1"> A) Consigo manter a calma e buscar soluções<br>
+
+                <input type="radio" name="q6" value="2"> B) Fico irritado(a), mas logo passa<br>
+
+                <input type="radio" name="q6" value="3"> C) Me sinto frustrado(a) por muito tempo<br>
+
+                <input type="radio" name="q6" value="4"> D) Entro em crise ou fico muito mal emocionalmente
+
+            </div>
+
+        </div>
+
+
+        <div class="question">
+
+            <p>7. Você consegue parar um momento do dia só para você?</p>
+
+            <div class="options">
+
+                <input type="radio" name="q7" value="1"> A) Sim, sempre reservo um tempo pra mim<br>
+
+                <input type="radio" name="q7" value="2"> B) Às vezes, quando dá<br>
+
+                <input type="radio" name="q7" value="3"> C) Raramente consigo<br>
+
+                <input type="radio" name="q7" value="4"> D) Nunca tenho tempo ou me sinto culpado(a) por parar
+
+            </div>
+
+        </div>
+
+
+        <div class="question">
+
+            <p>8. Você sente prazer nas coisas que gostava de fazer antes?</p>
+
+            <div class="options">
+
+                <input type="radio" name="q8" value="1"> A) Sim, continuo curtindo minhas atividades favoritas<br>
+
+                <input type="radio" name="q8" value="2"> B) Nem tanto, perdi um pouco do interesse<br>
+
+                <input type="radio" name="q8" value="3"> C) Quase nada me anima hoje em dia<br>
+
+                <input type="radio" name="q8" value="4"> D) Nada parece fazer sentido ou dar prazer
+
+            </div>
+
+        </div>
+
+
+        <div class="question">
+
+            <p>9. Como anda sua autoestima?</p>
+
+            <div class="options">
+
+                <input type="radio" name="q9" value="1"> A) Me sinto bem comigo mesmo(a)<br>
+
+                <input type="radio" name="q9" value="2"> B) Tenho dias bons e ruins<br>
+
+                <input type="radio" name="q9" value="3"> C) Me comparo muito e me sinto inferior<br>
+
+                <input type="radio" name="q9" value="4"> D) Não gosto de quem sou
+
+            </div>
+
+        </div>
+
+
+        <div class="question">
+
+            <p>10. Quando foi a última vez que você chorou por se sentir sobrecarregado(a) ou triste?</p>
+
+            <div class="options">
+
+                <input type="radio" name="q10" value="1"> A) Não lembro, faz tempo<br>
+
+                <input type="radio" name="q10" value="2"> B) Nas últimas semanas<br>
+
+                <input type="radio" name="q10" value="3"> C) Essa semana<br>
+
+                <input type="radio" name="q10" value="4"> D) Hoje ou ontem
+
+            </div>
+
+        </div>
+
+
+        <button onclick="calculateResult()">Finalizar Quiz</button>
+
+        <div id="result"></div>
+
+    </div>
+
+
+    <script>
+
+        function calculateResult() {
+
+            let total = 0;
+
+            for (let i = 1; i <= 10; i++) {
+
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+
+                if (selected) {
+
+                    total += parseInt(selected.value);
+
+                } else {
+
+                    alert(`Por favor, responda a pergunta ${i}.`);
+
+                    return;
+
+                }
+
+            }
+
+            let resultText = '';
+
+            if (total >= 10 && total <= 17) {
+
+                resultText = '✅ 10 a 17 pontos – Mente em Equilíbrio 🧘<br>Você parece estar com uma boa saúde mental. Consegue lidar bem com os desafios do dia a dia, mantém hábitos saudáveis e demonstra equilíbrio emocional. Continue se cuidando, cultivando o autocuidado e oferecendo apoio a quem precisa.';
+
+            } else if (total >= 18 && total <= 25) {
+
+                resultText = '⚠️ 18 a 25 pontos – Sinais de Oscilação ⚖️<br>Sua saúde mental está razoável, mas com alguns altos e baixos. Talvez você esteja lidando com momentos de estresse, insegurança ou cansaço emocional. Fique atento(a) aos sinais do corpo e da mente. Pequenos ajustes na rotina, descanso e conversas com pessoas de confiança podem ajudar bastante.';
+
+            } else if (total >= 26 && total <= 32) {
+
+                resultText = '💛 26 a 32 pontos – Cuidar é Preciso 💡<br>Sua saúde mental está pedindo atenção e carinho. Você pode estar se sentindo sobrecarregado(a), desmotivado(a) ou emocionalmente cansado(a). Isso não significa fraqueza — significa que você precisa de apoio, acolhimento e talvez repensar alguns hábitos. Procure conversar com alguém de confiança ou um profissional.';
+
+            } else if (total >= 33 && total <= 40) {
+
+                resultText = '🚨 33 a 40 pontos – Você Não Está Sozinho(a) 🤝<br>Sua saúde mental está em estado de alerta. Muitos dos seus sentimentos podem estar interferindo no seu bem-estar. Tristeza constante, falta de motivação, sono irregular, ansiedade ou solidão são sinais importantes. Você merece ajuda — e ela existe. Fale com um adulto, professor, psicólogo escolar ou alguém da sua confiança. Não ignore o que sente. Você importa!';
+
+            }
+
+            document.getElementById('result').innerHTML = resultText;
+
+            document.getElementById('result').style.display = 'block';
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+
